@@ -28,7 +28,7 @@ class ListNode:
             curr = curr.next
         return " -> ".join(result)
         
-def list_to_linkedlist(items: List[int]):
+def list_to_linkedlist(items: List[int]): # this just turns the dynamic array to linked list with pointers
     dummy = ListNode() #initialise an empty listNode as the dummy node (before the head)
     curr = dummy
     for i in items:
@@ -38,7 +38,14 @@ def list_to_linkedlist(items: List[int]):
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        return head
+        dummy = None #initialise a null listNode as the dummy node (before the head)
+        curr = head
+        while curr: # while curr not null
+            next_node = curr.next
+            curr.next = dummy
+            dummy = curr
+            curr = next_node
+        return dummy
 
 test = Solution()
 # dynamic array. must convert to linked list first before passing into function
