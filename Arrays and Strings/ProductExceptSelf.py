@@ -14,5 +14,26 @@
 
 from typing import List
 
+# since cannot divide, use prefix[i] * suffix[i]
 class Solution:
   def productExceptSelf(self, nums: List[int]) -> List[int]:
+    l_mult = 1
+    r_mult = 1
+    n = len(nums)
+    prefix = [1] * n
+    suffix = [1] * n
+
+    for i in range(n):
+      j = (-i) - 1 # this makes the j a reverse iterator
+      prefix[i] = l_mult
+      suffix[i] = r_mult
+      l_mult *= nums[i]
+      r_mult *= nums[j]
+
+    return [l*r for l,r in zip(prefix, suffix)]
+
+test = Solution()
+nums1 = [1, 2, 3, 4] # output = [24, 12, 8, 6]
+nums2 = [-1, 1, 0, -3, 3] # output = [0, 0, 9, 0, 0]
+test1 = test.productExceptSelf(nums1)
+test1 = test.productExceptSelf(nums2)
