@@ -17,3 +17,5 @@ class Solution:
             result = dictt.get(mult)
             if result == None:
                 return mult
+
+# NOTE: COULD HAVE USED A SET INSTEAD OF A DICTIONARY, BUT THIS WORKS TOO.
