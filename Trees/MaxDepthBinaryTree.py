@@ -1,6 +1,6 @@
 #104. Maximum Depth of Binary Tree
 
-from Trees.SameTree import TreeNode
+from Trees.TreeNode import TreeNode
 from typing import Optional
 
 class Solution:

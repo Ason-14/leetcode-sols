@@ -1,7 +1,8 @@
 #965. Univalued Binary Tree
 
-from Trees.SameTree import TreeNode
+from Trees.TreeNode import TreeNode
 from typing import Optional
+
 class Solution:
     def isUnivalTree(self, root: Optional[TreeNode]) -> bool:
         num = root.val

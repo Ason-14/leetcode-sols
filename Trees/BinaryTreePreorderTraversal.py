@@ -1,6 +1,6 @@
 #144. Binary Tree Preorder Traversal
 
-from Trees.SameTree import TreeNode
+from Trees.TreeNode import TreeNode
 from typing import List, Optional
 
 class Solution:

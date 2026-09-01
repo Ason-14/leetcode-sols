@@ -1,6 +1,6 @@
 #700. Search in a Binary Search Tree
 
-from Trees.SameTree import TreeNode
+from Trees.TreeNode import TreeNode
 from typing import Optional
 
 class Solution:
